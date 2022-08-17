@@ -22,6 +22,11 @@
 </head>
 
 <body class="center">
+    <div class="modal-backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="close-button" type="button" data-modal-close>X</button>
+        </div>
+    </div>
     <header>
         <div class="navigator -medium flex">
             <a class="nav_logo bold l-1" href="index.html"><span>Web</span>Studio</a>
@@ -60,7 +65,7 @@
     <div class="hero__bgimage">
         <div class="hero flex">
             <h1 class="-black">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-            <button type="button" class="-bold">Zamów usługe</button>
+            <button type="button" class="-bold" data-modal-open>Zamów usługe</button>
         </div>
     </div>
     <!-- NASZE ATUTY -->
@@ -436,6 +441,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
