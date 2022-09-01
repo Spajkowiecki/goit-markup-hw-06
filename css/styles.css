@@ -705,8 +705,20 @@ body {
   padding: 40px 40px 40px 40px;
 }
 
+.contact-form label {
+  position: relative;
+  color: var(--secondary-font-color);
+}
+
+.contact-form textarea {
+  width: 100%;
+  height: 120px;
+  padding: 12px 0px 0px 16px;
+}
+
 .contact-form h2 {
   text-align: center;
+  padding-bottom: 12px;
 }
 
 .contact-input {
@@ -718,6 +730,7 @@ body {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .contact-input:focus {
@@ -728,9 +741,65 @@ body {
   fill: #2196f3;
 }
 
-.contact-input-icon {
+.submit-button {
+  display: flex;
+
+  margin-top: 30px;
+  padding: 10px 76px 10px 76px;
+  background-color: var(--link-hover-font-color);
+  color: var(--logo-white);
+  line-height: calc(30 / 16);
+  font-weight: 700;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.checkbox_field {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.checkbox_field input {
+  appearance: none;
+}
+
+.checkbox_label {
   position: relative;
-  bottom: 25px;
-  left: 15px;
-  text-indent: 16px;
+}
+
+.checkbox_label:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15px;
+  width: 15px;
+  border: 1px solid black;
+  left: -20px;
+}
+
+.checkbox_input:checked + .checkbox_label {
+  color: red;
+}
+
+.user-icon {
+  position: absolute;
+  right: -15px;
+  top: 33px;
+}
+
+.phone-icon {
+  position: absolute;
+  left: -433px;
+  bottom: -87px;
+}
+
+.mail-icon {
+  position: absolute;
+  left: -433px;
+  bottom: -87px;
 }
