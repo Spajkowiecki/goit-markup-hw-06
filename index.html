@@ -22,6 +22,7 @@
 </head>
 
 <body class="center">
+    <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ | POCZĄTEK: OKNO MODALNE &&&& BEGINNING OF: MODAL WINDOW | ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
     <div class="modal-backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="close-button" type="button" data-modal-close>X</button>
@@ -29,44 +30,49 @@
                 <h2>Zostaw swoje dane w formularzu poniżej</h2>
                 <label for="name">
                     Imię
-                    <input type="text" name="name-field" class="contact-input"><svg class="user-icon" width="32"
-                        height="32">
+                    <input type="text" name="name-field" class="contact-input">
+                    <svg class="user-icon" width="32" height="32">
                         <use href="images/icons.svg#black_human">
                         </use>
                     </svg></input>
                 </label>
                 <label for="phone">
                     Telefon
-                    <input type="tel" name="name-field" class="contact-input"><svg class="phone-icon" width="32"
-                        height="32">
+                    <input type="tel" name="name-field" class="contact-input">
+                    <svg class="phone-icon" width="32" height="32">
                         <use href="images/icons.svg#black_phone">
                         </use>
                     </svg>
                 </label>
                 <label for="email">
                     Email
-                    <input type="email" name="name-field" class="contact-input"><svg class="mail-icon" width="32"
-                        height="32">
+                    <input type="email" name="name-field" class="contact-input">
+                    <svg class="mail-icon" width="32" height="32">
                         <use href="images/icons.svg#black_envelop">
                         </use>
                     </svg>
                 </label>
-                <label for="comment">
+                <label class="comment_field" for="comment">
                     Komentarz
                     <textarea name="comment" id="comment" placeholder="wprowadź tekst"></textarea>
                 </label>
+                <!-- ▼▼▼▼▼▼▼▼▼▼▼▼| CUSTOM CHECKBOX |▼▼▼▼▼▼▼▼▼▼▼▼ -->
                 <div class="checkbox_field">
+                    <input class="checkbox_input" type="checkbox" name="checkbox" id="checkbox">
+
                     <label for="checkbox" class="checkbox_label">
-                        <input class="checkbox_input" type="checkbox" name="checkbox" id="checkbox" value="checkbox">
                         Oświadczam iż akceptuję <a href="/regulamin.html">Regulamin</a> i
                         <a href="/polityka.html">Politykę
                             Prywatności</a>.
                     </label>
                 </div>
+                <!-- ▲▲▲▲▲▲▲▲▲▲▲▲| CUSTOM CHECKBOX |▲▲▲▲▲▲▲▲▲ -->
                 <button class="submit-button" type="submit">WYŚLIJ</button>
             </form>
         </div>
     </div>
+    <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: OKNO MODALNE &&&& ENDING: MODAL WINDOW | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+    <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ | POCZĄTEK: NAGŁÓWEK &&&& BEGINNING: HEADER | ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
     <header>
         <div class="navigator -medium flex">
             <a class="nav_logo bold l-1" href="index.html"><span>Web</span>Studio</a>
@@ -101,6 +107,7 @@
             </ul>
         </div>
     </header>
+    <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: NAGŁÓWEK &&&& ENDING: HEADER | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
     <!-- DIV: HEADING BAR -->
     <div class="hero__bgimage">
         <div class="hero flex">
@@ -468,7 +475,7 @@
                     <form name="newsletter_signup_form" autocomplete="on" novalidate>
                         <p class="-bold newsletter_form_desc">ZAPISZ SIĘ DO NEWSLETTERA</p>
                         <div class="newsletter_signup_items">
-                            <input class="footer_email_input" type="email" name="E-mail" placeholder="E-mail" checked>
+                            <input class="footer_email_input" type="email" name="E-mail" placeholder="E-mail">
                             <button class="footer_button_submit" type="submit">
                                 Zapisz się<svg class="footer_button_svg" width="24" height="24">
                                     <use href="images/icons.svg#paper_plane"></use>
