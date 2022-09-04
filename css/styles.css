@@ -98,7 +98,7 @@ body {
 */
 
 /* -[ KONTENER DLA NAWIGACJI ]- */
-.navigator {
+.nav {
   align-items: center;
   padding: 24px 227px 25px 215px;
   border: 1px solid #ececec;
@@ -106,7 +106,7 @@ body {
 
 /* -[ Navigation ]- */
 
-.navigation {
+.nav__bar {
   letter-spacing: 0.02em;
   text-align: left;
   padding-left: 93px;
@@ -115,49 +115,66 @@ body {
 
 /* Odstęp ustawiony po przez justify content: space-around */
 
-/* -[D: STYLIZACJA LOGO ]-*/
-.nav_logo {
+/* ▼▼▼| LOGO |▼▼▼ = ▼▼▼| LOGO |▼▼▼ = ▼▼▼| LOGO |▼▼▼ = ▼▼▼| LOGO |▼▼▼ */
+/* EN: MAIN SETTING FOR LOGO WORDS */
+/* PL: GŁÓWNY STYL DLA LOGO */
+.logo {
   font-family: "Raleway";
-  color: var(--logo-black);
   font-size: 26px;
   letter-spacing: 0.03em;
 }
 
-/* ZMIANA KOLORU ELEMENTÓW*/
+/* EN: SET THE SECOND WORD TO BLACK "STUDIO" */
+/* PL: USTAWIENIE CZŁONU "STUDIO" NA KOLOR CZARNY */
+.page-header__logo {
+  color: var(--logo-black);
+}
 
+/* EN: BLUE COLOR FOR FIRST WORD: "WEB" IN LOGO */
+/* PL: USTAWIENIE KOLORU NIEBIESKIEGO DLA CZŁONU "WEB" */
 .l-2 span,
 .l-1 span {
   color: var(--link-hover-font-color);
 }
-
-.nav_link:hover,
-.nav_link:focus {
+/* ▲▲▲| LOGO |▲▲▲ = ▲▲▲| LOGO |▲▲▲ = ▲▲▲| LOGO |▲▲▲ = ▲▲▲| LOGO |▲▲▲ = ▲▲▲*/
+/* ▼▼▼| LINKS |▼▼▼ = ▼▼▼| LINKS |▼▼▼ = ▼▼▼| LINKS |▼▼▼ = ▼▼▼| LINKS |▼▼▼ */
+/* EN: FOCUS & HOVER - MAKE LINK BLUE */
+/* PL: FOCUS & HOVER - ZMIANA NA NIEBIESKI */
+.nav__link:hover,
+.nav__link:focus {
   color: var(--link-hover-font-color);
 }
 
-.hero > button,
+/* EN: FILTER BUTTONS ON PORTFOLIO PAGE -> FOCUS & HOVER - MAKE LINK BLUE */
+/* PL: GUZIKI FILTRA W PORTFOLIO FOCUS & HOVER - ZMIANA NA NIEBIESKI */
+.hero-front__button,
 .filter > li > button:focus,
 .filter > li > button:hover {
   background-color: var(--link-hover-font-color);
 }
 
-.my_team {
-  background-color: var(--team-bg);
-}
-
-.footer .nav_logo,
-.hero > h1 {
+/* EN: FONT COLOR  */
+/* EN: SET THE SECOND WORD "STUDIO" TO WHITE*/
+/* PL: KOLOR CZCIONKI */
+/* PL: USTAWIENIE CZŁONU "STUDIO" NA KOLOR BIAŁY*/
+.page-footer__logo,
+.footer .logo,
+.hero-front__title {
   color: var(--logo-white);
 }
-/* Podstawowa stylizacja linków  */
-.nav_link {
+
+/* EN: BASIC LINK STYLISATION */
+/* PL: PODSTAWOWA STYLIZACJA LINKÓW NA STRONIE*/
+.nav__link {
   color: var(--main-font-color);
   transition: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
   position: relative;
 }
 
-.activated::after {
+/* EN: UNDERLINE ON ACTIVE PAGE */
+/* PL: PODKREŚLENIE NA AKTYWNEJ STRONIE*/
+.nav__link--activated::after {
   height: 4px;
   position: absolute;
   right: 0;
@@ -168,28 +185,36 @@ body {
   background: var(--link-hover-font-color);
 }
 
-/* Zmiana koloru po najechaniu myszki */
-
-.nav-core li:not(:last-child) {
+.nav__core li:not(:last-child) {
   padding-right: 46px;
 }
 
-.nav-contact li:not(:last-child) {
+.nav__contact li:not(:last-child) {
   padding-right: 50px;
 }
 
 /* Nadanie elemntom zbiorczo kolor --secondary-font-color */
-.nav-contact .nav_link,
-.poster p,
-.atut_p2 {
+.nav__contact .nav__link,
+.team__poster p,
+.strengths_p2 {
   color: var(--secondary-font-color);
   fill: var(--secondary-font-color);
 }
 
-.nav-contact .nav_link:hover {
+.nav__contact .nav__link:hover {
   color: var(--link-hover-font-color);
   fill: var(--link-hover-font-color);
 }
+
+/* USTAWIENIA DO IKON */
+.nav__icons {
+  display: flex;
+  align-items: center;
+}
+
+/*
+        <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | END OF SETTINGS: NAV & KONIEC BLOKU USTAWIEŃ: NAV | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+*/
 
 .image_poster {
   position: relative;
@@ -222,15 +247,11 @@ body {
   gap: 10px;
 }
 
-.nav_icons {
-  display: flex;
-  align-items: center;
+.hero {
+  background: url("../images/Img.jpg");
 }
 
-/*
--------------------##############################----------------------
-/* STYLIZACJA HEADING_BAR  */ /* STYLIZACJA HEADING_BAR  */ /* STYLIZACJA HEADING_BAR  */
-.hero {
+.hero-front {
   background-color: rgb(47, 48, 58, 0.4);
 
   flex-direction: column;
@@ -238,11 +259,7 @@ body {
   padding: 200px;
 }
 
-.hero__bgimage {
-  background: url("../images/Img.jpg");
-}
-
-.hero > h1 {
+.hero-front__title {
   letter-spacing: 0.06em;
   font-size: 44px;
   line-height: calc(60 / 44);
@@ -252,7 +269,7 @@ body {
   padding-bottom: 30px;
 }
 
-.hero > button {
+.hero-front__button {
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
   padding: 10px 41px 10px 42px;
@@ -265,16 +282,19 @@ body {
   cursor: pointer;
 }
 
-.hero > button:hover {
+.hero-front__button:hover {
   background-color: #126cb6;
   border-color: #2196f3;
 }
 
-.hero > button:focus {
+.hero-front__button:focus {
   cursor: pointer;
 }
 
-/* USTAWIENIE SEKCJI */ /* USTAWIENIE SEKCJI */ /* USTAWIENIE SEKCJI */ /* USTAWIENIE SEKCJI */ /* USTAWIENIE SEKCJI */
+/*
+        <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | END OF SETTINGS: HERO & KONIEC BLOKU USTAWIEŃ: HERO | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+*/
+
 .section {
   padding: 94px 0;
 }
@@ -289,11 +309,10 @@ body {
   text-align: center;
 }
 
-/* STYLIZACJA ATUTÓW */ /* STYLIZACJA ATUTÓW */ /* STYLIZACJA ATUTÓW */ /* STYLIZACJA ATUTÓW */ /* STYLIZACJA ATUTÓW */
-
-/* ELEMENTY SVG */
-
-.atut_svg {
+/*
+        <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | END OF GLOBAL SETTING OF SECTIONS & KONIEC USTAWIEŃ GLOBALNYCH SECTION | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+*/
+.strengths__svg {
   display: flex;
   width: 270px;
   height: 120px;
@@ -306,21 +325,27 @@ body {
 
 /* Ustawienie kontenera na listę w klasie atut */
 /*Custom paragraph h7*/
-.atut_h7 {
+.strengths__h7 {
   padding-bottom: 10px;
 }
 
 /* Custom paragraph p2 */
-.atut_p2 {
+.strengths__p2 {
   line-height: calc(24 / 14);
   width: 270px;
   letter-spacing: 0.03em;
 }
 /*
--------------------##############################----------------------*/
+        <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | END OF: STYLE OF STRENGTHS & KONIEC: STYLE ATUTÓW | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+*/
 
-/* NASZ ZESPÓŁ */
-.poster {
+/* EN: BACKGROUND FOR MY-TEAM SECTION */
+/* PL: TŁO SEKCJI MY-TEAM */
+.team {
+  background-color: var(--team-bg);
+}
+
+.team__poster {
   background-color: var(--logo-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -328,7 +353,7 @@ body {
   border-bottom-right-radius: 4px;
 }
 
-.poster figcaption {
+.team__poster figcaption {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -336,11 +361,15 @@ body {
   font-weight: 500;
 }
 
-.poster h3 {
+.team__poster h3 {
   font-size: 16px;
   letter-spacing: 0.03em;
   padding-bottom: 10px;
 }
+
+/*
+        <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | END OF: TEAM & KONIEC: DRUŻYNA | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+*/
 
 .filter {
   gap: 8px;
@@ -373,6 +402,10 @@ body {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
+
+/*
+        <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | END OF: PORTFOLIO FILTER STYLE & KONIEC: FILTRU PORTFOLIO | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+*/
 
 .portfolio_poster {
   background-color: var(--logo-white);
@@ -452,14 +485,14 @@ body {
   padding-bottom: 94px;
 }
 
-.footer_svg,
-.poster_svg {
+.footer__svg,
+.team__poster-svg {
   padding-top: 16px;
   width: 206px;
   fill: var(--clients-dark-gray);
 }
-.footer_svg_item,
-.poster_svg_item {
+.footer__svg_item,
+.team__poster-svg-item {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -467,11 +500,11 @@ body {
   height: 44px;
 }
 
-.footer_svg {
+.footer__svg {
   padding-top: 20px;
 }
 
-.footer_svg_item {
+.footer__svg_item {
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--logo-white);
   border-radius: 50%;
@@ -479,7 +512,7 @@ body {
   transition-duration: 250ms;
 }
 
-.poster_svg_item {
+.team__poster-svg-item {
   background-color: rgba(255, 255, 255, 0.1);
   fill: var(--clients-dark-gray);
   border-radius: 50%;
@@ -487,10 +520,10 @@ body {
   transition-duration: 250ms;
 }
 
-.footer_svg_item:focus,
-.poster_svg_item:focus,
-.footer_svg_item:hover,
-.poster_svg_item:hover {
+.footer__svg_item:focus,
+.team__poster-svg-item:focus,
+.footer__svg_item:hover,
+.team__poster-svg-item:hover {
   border-radius: 50%;
   background-color: var(--link-hover-font-color);
   fill: var(--logo-white);
@@ -501,7 +534,7 @@ body {
 }
 /* NASI KLIENCI */ /* NASI KLIENCI */ /* NASI KLIENCI */ /* NASI KLIENCI */ /* NASI KLIENCI */ /* NASI KLIENCI */ /* NASI KLIENCI */ /* NASI KLIENCI */
 
-.clients_svg {
+.customers__svg {
   display: flex;
   border: 1px solid var(--clients-dark-gray);
   border-radius: 4px;
@@ -515,62 +548,64 @@ body {
   transition-duration: 250ms;
 }
 
-.clients_svg:hover,
-.clients_svg:focus {
+.customers__svg:hover,
+.customers__svg:focus {
   transform: scale(1.1);
   border-color: var(--link-hover-font-color);
   fill: var(--link-hover-font-color);
 }
 
-.clients_svg_box {
+.customers__svg_box {
   width: 106px;
   height: 60.04px;
 }
 
-/* FOOTER section */ /* FOOTER section */ /* FOOTER section */ /* FOOTER section */ /* FOOTER section */ /* FOOTER section */ /* FOOTER section */
+/*
+        <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | END OF: CUSTOMERS STYLE & KONIEC: STYL DLA KLIENTÓW | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+*/
 
-.footer_content {
+.footer {
   background-color: var(--header-bg);
   padding: 60px 0px 60px 215px;
   padding-left: 30px;
 }
 
-.footer_position {
+.footer__position {
   display: flex;
   align-items: baseline;
 }
 
-.footer_desc {
+.footer__desc {
   display: flex;
   flex-direction: column;
   font-weight: calc(24 / 14);
   letter-spacing: 0.03em;
 }
 
-.footer_desc li {
+.footer__desc li {
   padding-top: 9px;
   padding-bottom: 9px;
 }
 
-.footer_desc li:last-child {
+.footer__desc li:last-child {
   padding-top: 0px;
 }
 
-.footer_logo {
+.footer__logo {
   padding-bottom: 20px;
 }
 
-.footer_logo > .nav_logo {
+.footer__logo > .nav__logo {
   color: var(--logo-white);
 }
 
-.footer_desc .nav_link {
+.footer__desc .nav__link {
   color: rgba(255, 255, 255, 0.6);
   transition: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 250ms;
 }
 
-.footer_desc .nav_link:hover {
+.footer__desc .nav__link:hover {
   color: var(--link-hover-font-color);
 }
 
@@ -579,17 +614,78 @@ body {
   color: var(--logo-white);
 }
 
-.footer_svg p {
+.footer__svg p {
   color: var(--logo-white);
   padding-bottom: 20px;
 }
 
-.join_us {
+.footer--join_us {
   display: flex;
   padding-left: 70px;
 }
 
-/*======== MODAL =========*/ /*======== MODAL =========*/ /*======== MODAL =========*/
+/*
+        <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | END OF: SOCIAL-MEDIA IN FOOTER & KONIEC: SOCIAL-MEDIA STOPKA | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+*/
+
+.newsletter {
+  display: flex;
+  margin-left: 78px;
+}
+
+.newsletter__desc {
+  color: var(--logo-white);
+  padding-bottom: 20px;
+}
+
+.newsletter__items {
+  display: flex;
+  gap: 12px;
+}
+
+.newsletter__input {
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: 358px;
+  height: 50px;
+  background: var(--header-bg);
+  color: rgba(255, 255, 255, 0.6);
+  text-indent: 16px;
+}
+
+.newsletter__input:hover {
+  border: 1px solid var(--link-hover-font-color);
+}
+
+.newsletter__input:focus {
+  border: 1px solid var(--link-hover-font-color);
+}
+
+.newsletter__button {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 24px;
+  line-height: calc(30 / 16);
+  background: var(--link-hover-font-color);
+  letter-spacing: 0.06em;
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  color: var(--logo-white);
+  fill: var(--logo-white);
+  width: 200px;
+  padding: 10px 28px 10px 42px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.newsletter__button:hover {
+  background-color: #126cb6;
+}
+
+/*
+        <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | END OF: SIGNUP TO NEWSLETTER & KONIEC: ZAPISU NEWSLETTERA | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+*/
 
 .modal {
   position: absolute;
@@ -609,6 +705,13 @@ body {
   transition-delay: 0s, 0s, 0s;
 }
 
+.modal--is-hidden {
+  transform: scaleY(0);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .modal__window {
   position: absolute;
   top: 50%;
@@ -620,7 +723,7 @@ body {
   border-radius: 4px;
 }
 
-.close-button {
+.modal__button {
   cursor: pointer;
   position: absolute;
   background-color: inherit;
@@ -634,90 +737,22 @@ body {
     transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms;
 }
 
-.close-button:hover {
+.modal__button:hover {
   background-color: var(--link-hover-font-color);
   color: white;
 }
 
-.modal--is-hidden {
-  transform: scaleY(0);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-/* CHANGES INJECTED IN HW6  */
-.newsletter_signup {
-  display: flex;
-  margin-left: 78px;
-}
-
-.newsletter_form_desc {
-  color: var(--logo-white);
-  padding-bottom: 20px;
-}
-
-.footer_email_input {
-  border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  width: 358px;
-  height: 50px;
-  background: var(--header-bg);
-  color: rgba(255, 255, 255, 0.6);
-  text-indent: 16px;
-}
-
-.footer_email_input:hover {
-  border: 1px solid var(--link-hover-font-color);
-}
-
-.footer_email_input:focus {
-  border: 1px solid var(--link-hover-font-color);
-}
-
-.footer_button_submit {
-  display: flex;
-  align-items: center;
-  align-content: center;
-  gap: 24px;
-  line-height: calc(30 / 16);
-  background: var(--link-hover-font-color);
-  letter-spacing: 0.06em;
-  font-weight: 700;
-  border: none;
-  border-radius: 4px;
-  color: var(--logo-white);
-  fill: var(--logo-white);
-  width: 200px;
-  padding: 10px 28px 10px 42px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-}
-.footer_button_submit:hover {
-  background-color: #126cb6;
-}
-
-.footer_button_inside {
-  display: flex;
-  align-items: center;
-}
-
-.newsletter_signup_items {
-  display: flex;
-  gap: 12px;
-}
-
-/* CONTACT FORM DEFINITIONS  */
-.contact-form {
+.modal__form {
   padding: 40px 40px 40px 40px;
 }
 
-.contact-form label {
+.modal__form label {
   font-size: 12px;
   position: relative;
   color: var(--secondary-font-color);
 }
 
-.contact-form textarea {
+.modal__form textarea {
   resize: none;
   outline: none;
   margin-top: 4px;
@@ -730,19 +765,19 @@ body {
   transition-property: fill, border;
 }
 
-.contact-form textarea::placeholder {
+.modal__form textarea::placeholder {
   color: var(--clients-dark-gray);
 }
 
-.contact-form textarea:focus {
+.modal__form textarea:focus {
   border: 1px solid var(--link-hover-font-color);
 }
-.contact-form h2 {
+.modal__form h2 {
   text-align: center;
   padding-bottom: 12px;
 }
 
-.contact-input {
+.modal__input {
   position: relative;
   width: 100%;
   height: 2.5rem;
@@ -756,15 +791,15 @@ body {
   transition-property: fill, border;
 }
 
-.contact-input:focus {
+.modal__input:focus {
   outline: none;
   border: 1px solid var(--link-hover-font-color);
 }
-.contact-input:focus + svg {
+.modal__input:focus + svg {
   fill: #2196f3;
 }
 
-.submit-button {
+.modal__button--submit {
   display: flex;
 
   margin-top: 30px;
@@ -782,24 +817,24 @@ body {
   margin-right: auto;
 }
 
-.checkbox_field {
+.modal-checkbox {
   display: flex;
   justify-content: center;
   padding-top: 20px;
 }
 
-.checkbox_field input {
+.modal-checkbox input {
   appearance: none;
 }
 
-.checkbox_label {
+.modal-checkbox__label {
   position: relative;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 00.03em;
 }
 
-.checkbox_label::before {
+.modal-checkbox__label::before {
   content: "";
   display: block;
   position: absolute;
@@ -812,7 +847,7 @@ body {
   cursor: pointer;
 }
 
-.checkbox_input:checked + .checkbox_label::before {
+.modal-checkbox__input:checked + .modal-checkbox__label::before {
   border: none;
   height: 16px;
   width: 16px;
@@ -836,3 +871,7 @@ body {
   left: -433px;
   bottom: -87px;
 }
+
+/*
+        <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | END OF: MODAL WINDOW & KONIEC: OKNA MODALNEGO | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+*/
