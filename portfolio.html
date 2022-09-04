@@ -17,21 +17,24 @@
 </head>
 
 <body class="center">
-
-    <header>
-        <div class="navigator -medium flex">
-            <a class="nav_logo bold l-1" href="index.html"><span>Web</span>Studio</a>
-            <nav class="navigation">
-                <ul class="nav-core flex">
-                    <li><a class="nav_link" href="index.html">Agencja</a></li>
-                    <li><a class="nav_link activated" href="portfolio.html">Portfolio</a></li>
-                    <li><a class="nav_link" href="kontakt.html">Kontakt</a></li>
+    <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ | POCZĄTEK: NAGŁÓWEK &&&& BEGINNING: HEADER | ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
+    <header class="page-header">
+        <div class="nav -medium flex">
+            <!-- | LOGO | -->
+            <a class="logo page-header__logo bold l-1" href="index.html"><span>Web</span>Studio</a>
+            <nav class="nav__bar">
+                <ul class="nav__core flex">
+                    <!-- ▼▼▼ | POCZĄTEK: LINKI NAWIGACYJNE &&&& BEGINNING: NAV LINKS | ▼▼▼-->
+                    <li><a class="nav__link" href="index.html">Agencja</a></li>
+                    <li><a class="nav__link nav__link--activated" href="portfolio.html">Portfolio</a></li>
+                    <li><a class="nav__link" href="kontakt.html">Kontakt</a></li>
+                    <!-- ▲▲▲ | KONIEC: LINKI NAWIGACYJNE &&&& ENDING: NAV LINKS | ▲▲▲-->
                 </ul>
             </nav>
-            <ul class="nav-contact flex">
-                <li><a class="nav_link icons" href="mailto:info@devstudio.com">
-                        <div class="nav-icons">
-                            <svg width="16" height="12">
+            <ul class="nav__contact flex">
+                <li><a class="nav__link icons" href="mailto:info@devstudio.com">
+                        <div class="nav__icons">
+                            <svg width="20" height="16">
                                 <use href="images/icons.svg#envelop">
 
                                 </use>
@@ -39,9 +42,9 @@
                         </div>
                         info@devstudio.com
                     </a></li>
-                <li><a class="nav_link icons" href="tel:+48111111111">
-                        <div class="nav-icons">
-                            <svg width="16" height="12">
+                <li><a class="nav__link icons" href="tel:+48111111111">
+                        <div class="nav__icons">
+                            <svg width="20" height="16">
                                 <use href="images/icons.svg#mobile">
 
                                 </use>
@@ -52,6 +55,7 @@
             </ul>
         </div>
     </header>
+    <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: NAGŁÓWEK &&&& ENDING: HEADER | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
     <main class="sections">
         <section class="section container ">
             <ul class="flex filter">
@@ -224,46 +228,47 @@
             </ul>
         </section>
     </main>
-    <footer class="footer_content">
+    <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ | POCZĄTEK: FOOTER &&&& BEGINNING: FOOTER | ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
+    <footer class="footer">
         <div class="container">
-            <div class="footer_position">
-                <div class="footer_mydata">
-                    <div class="footer_logo">
-                        <a class="nav_logo l-2" href="index.html"><span>Web</span>Studio</a>
+            <div class="footer__position">
+                <div>
+                    <div class="footer__logo">
+                        <a class="logo page-footer__logo l-2" href="index.html"><span>Web</span>Studio</a>
                     </div>
                     <address class="address">m. Warszawa, Aleje Jerozolimskie 21</address>
-                    <ul class="footer_desc">
-                        <li><a class="nav_link" href="mailto:info@example.com">info@devstudio.com</a></li>
-                        <li><a class="nav_link" href="tel:+48111111111">+48 111 111 111</a></li>
+                    <ul class="footer__desc">
+                        <li><a class="nav__link" href="mailto:info@example.com">info@devstudio.com</a></li>
+                        <li><a class="nav__link" href="tel:+48111111111">+48 111 111 111</a></li>
                     </ul>
                 </div>
-                <div class="join_us">
-                    <div class="footer_svg">
+                <div class="footer--join_us">
+                    <div class="footer__svg">
                         <p class="-bold">DOŁĄCZ DO NAS</p>
-                        <ul class="flex-between join_socials">
-                            <li>
-                                <a class="footer_svg_item" href="">
+                        <ul class="flex-between">
+                            <li class="footer__svg_item">
+                                <a class="footer__svg_item" href="">
                                     <svg width="20" height="20">
                                         <use href="images/icons.svg#instagram"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="footer_svg_item">
-                                <a class="footer_svg_item" href="">
+                            <li class="footer__svg_item">
+                                <a class="footer__svg_item" href="">
                                     <svg width="20" height="20">
                                         <use href="images/icons.svg#twitter"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="footer_svg_item">
-                                <a class="footer_svg_item" href="">
+                            <li class="footer__svg_item">
+                                <a class="footer__svg_item" href="">
                                     <svg width="20" height="20">
                                         <use href="images/icons.svg#facebook"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="footer_svg_item">
-                                <a class="footer_svg_item" href="">
+                            <li class="footer__svg_item">
+                                <a class="footer__svg_item" href="">
                                     <svg width="20" height="20">
                                         <use href="images/icons.svg#linkedin2"></use>
                                     </svg>
@@ -272,13 +277,13 @@
                         </ul>
                     </div>
                 </div>
-                <div class="newsletter_signup">
-                    <form name="newsletter_signup_form" autocomplete="on" novalidate>
-                        <p class="-bold newsletter_form_desc">ZAPISZ SIĘ DO NEWSLETTERA</p>
-                        <div class="newsletter_signup_items">
-                            <input class="footer_email_input" type="email" name="E-mail" placeholder="E-mail">
-                            <button class="footer_button_submit" type="submit">
-                                Zapisz się<svg class="footer_button_svg" width="24" height="24">
+                <div class="newsletter">
+                    <form name="newsletter__signup" autocomplete="on" novalidate>
+                        <p class="-bold newsletter__desc">ZAPISZ SIĘ DO NEWSLETTERA</p>
+                        <div class="newsletter__items">
+                            <input class="newsletter__input" type="email" name="E-mail" placeholder="E-mail" required>
+                            <button class="newsletter__button" type="submit">
+                                Zapisz się<svg class="newsletter__svg" width="24" height="24">
                                     <use href="images/icons.svg#paper_plane"></use>
                                 </svg>
 
@@ -289,6 +294,7 @@
             </div>
         </div>
     </footer>
+    <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: FOOTER &&&& ENDING: FOOTER | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
 </body>
 
 </html>
