@@ -747,6 +747,7 @@ body {
 }
 
 .modal__form label {
+  display: block;
   font-size: 12px;
   position: relative;
   color: var(--secondary-font-color);
@@ -856,20 +857,20 @@ body {
 
 .user-icon {
   position: absolute;
-  right: -15px;
-  top: 33px;
+  left: 13px;
+  bottom: 3px;
 }
 
 .phone-icon {
   position: absolute;
-  left: -433px;
-  bottom: -87px;
+  left: 13px;
+  bottom: 3px;
 }
 
 .mail-icon {
   position: absolute;
-  left: -433px;
-  bottom: -87px;
+  left: 13px;
+  bottom: 3px;
 }
 
 /*
