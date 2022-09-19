@@ -39,7 +39,6 @@ body {
   letter-spacing: 0.02em;
   color: var(--main-font-color);
   background-color: var(--logo-white);
-  box-shadow: 3px 3px 5px rgb(136, 136, 136);
 }
 
 /*
@@ -853,6 +852,13 @@ body {
   height: 16px;
   width: 16px;
   background-image: url("../images/checked.svg");
+}
+
+.checkbox__link,
+.checkbox__link:hover,
+.checkbox__link:focus {
+  color: var(--link-hover-font-color);
+  text-decoration: underline;
 }
 
 .user-icon {
