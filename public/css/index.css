@@ -121,7 +121,7 @@ body {
 .hero {
   color: #fff;
   min-height: 600px;
-  background: url("/images/hero.jpg");
+  background: url("./images/hero.jpg");
   font-family: "Roboto", sans-serif;
 }
 .hero__front {
