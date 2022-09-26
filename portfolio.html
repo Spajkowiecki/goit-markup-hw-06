@@ -13,47 +13,43 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&amp;family=Roboto:wght@400;500;700;900&amp;display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="./public/css/index.css">
 </head>
 
 <body class="center">
     <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ | POCZĄTEK: NAGŁÓWEK &&&& BEGINNING: HEADER | ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
-    <header class="page-header">
-        <div class="nav -medium flex">
-            <!-- | LOGO | -->
-            <a class="logo page-header__logo bold l-1" href="index.html"><span>Web</span>Studio</a>
-            <nav class="nav__bar">
-                <ul class="nav__core flex">
-                    <!-- ▼▼▼ | POCZĄTEK: LINKI NAWIGACYJNE &&&& BEGINNING: NAV LINKS | ▼▼▼-->
-                    <li><a class="nav__link" href="index.html">Agencja</a></li>
-                    <li><a class="nav__link nav__link--activated" href="portfolio.html">Portfolio</a></li>
-                    <li><a class="nav__link" href="kontakt.html">Kontakt</a></li>
-                    <!-- ▲▲▲ | KONIEC: LINKI NAWIGACYJNE &&&& ENDING: NAV LINKS | ▲▲▲-->
-                </ul>
-            </nav>
-            <ul class="nav__contact flex">
-                <li><a class="nav__link icons" href="mailto:info@devstudio.com">
-                        <div class="nav__icons">
-                            <svg width="20" height="16">
-                                <use href="images/icons.svg#envelop">
-
-                                </use>
-                            </svg>
-                        </div>
-                        info@devstudio.com
-                    </a></li>
-                <li><a class="nav__link icons" href="tel:+48111111111">
-                        <div class="nav__icons">
-                            <svg width="20" height="16">
-                                <use href="images/icons.svg#mobile">
-
-                                </use>
-                            </svg>
-                        </div>
-                        +48 111 111 111
-                    </a></li>
+    <header class="page__header">
+        <!-- | LOGO | -->
+        <a class="logo logo__header" href="./index.html"><span>Web</span><span>Studio</span></a>
+        <nav class="nav">
+            <ul class="nav__list">
+                <!-- ▼▼▼ | POCZĄTEK: LINKI NAWIGACYJNE &&&& BEGINNING: NAV LINKS | ▼▼▼-->
+                <li><a class="link link__nav" href="index.html">Agencja</a></li>
+                <li><a class="link link__nav" href="portfolio.html">Portfolio</a></li>
+                <li><a class="link link__nav" href="kontakt.html">Kontakt</a></li>
+                <!-- ▲▲▲ | KONIEC: LINKI NAWIGACYJNE &&&& ENDING: NAV LINKS | ▲▲▲-->
             </ul>
-        </div>
+        </nav>
+        <ul class="contact">
+            <li>
+                <a class="link link__icon" href="mailto:info@devstudio.com">
+                    <svg width="20" height="16">
+                        <use href="images/icons.svg#envelop">
+
+                        </use>
+                    </svg>
+                    info@devstudio.com
+                </a>
+            </li>
+            <li><a class="link link__icon" href="tel:+48111111111">
+                    <svg width="20" height="16">
+                        <use href="images/icons.svg#mobile">
+
+                        </use>
+                    </svg>
+                    +48 111 111 111
+                </a></li>
+        </ul>
     </header>
     <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: NAGŁÓWEK &&&& ENDING: HEADER | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
     <main class="sections">
@@ -230,68 +226,58 @@
     </main>
     <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ | POCZĄTEK: FOOTER &&&& BEGINNING: FOOTER | ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
     <footer class="footer">
-        <div class="container">
-            <div class="footer__position">
-                <div>
-                    <div class="footer__logo">
-                        <a class="logo page-footer__logo l-2" href="index.html"><span>Web</span>Studio</a>
-                    </div>
-                    <address class="address">m. Warszawa, Aleje Jerozolimskie 21</address>
-                    <ul class="footer__desc">
-                        <li><a class="nav__link" href="mailto:info@example.com">info@devstudio.com</a></li>
-                        <li><a class="nav__link" href="tel:+48111111111">+48 111 111 111</a></li>
-                    </ul>
-                </div>
-                <div class="footer--join_us">
-                    <div class="footer__svg">
-                        <p class="-bold">DOŁĄCZ DO NAS</p>
-                        <ul class="flex-between">
-                            <li class="footer__svg_item">
-                                <a class="footer__svg_item" href="">
-                                    <svg width="20" height="20">
-                                        <use href="images/icons.svg#instagram"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="footer__svg_item">
-                                <a class="footer__svg_item" href="">
-                                    <svg width="20" height="20">
-                                        <use href="images/icons.svg#twitter"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="footer__svg_item">
-                                <a class="footer__svg_item" href="">
-                                    <svg width="20" height="20">
-                                        <use href="images/icons.svg#facebook"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                            <li class="footer__svg_item">
-                                <a class="footer__svg_item" href="">
-                                    <svg width="20" height="20">
-                                        <use href="images/icons.svg#linkedin2"></use>
-                                    </svg>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="newsletter">
-                    <form name="newsletter__signup" autocomplete="on" novalidate>
-                        <p class="-bold newsletter__desc">ZAPISZ SIĘ DO NEWSLETTERA</p>
-                        <div class="newsletter__items">
-                            <input class="newsletter__input" type="email" name="E-mail" placeholder="E-mail" required>
-                            <button class="newsletter__button" type="submit">
-                                Zapisz się<svg class="newsletter__svg" width="24" height="24">
-                                    <use href="images/icons.svg#paper_plane"></use>
-                                </svg>
-
-                            </button>
-                        </div>
-                    </form>
-                </div>
+        <div class="footer__left">
+            <div class="footer__logo">
+                <a class="logo logo__footer" href="./index.html"><span>Web</span><span>Studio</span></a>
             </div>
+            <address class="footer__addr">m. Warszawa, Aleje Jerozolimskie 21</address>
+            <ul class="footer__desc">
+                <li><a class="link link__footer" href="mailto:info@example.com">info@devstudio.com</a></li>
+                <li><a class="link link__footer" href="tel:+48111111111">+48 111 111 111</a></li>
+            </ul>
+        </div>
+        <div class="footer__medias">
+            <p class="footer__title">DOŁĄCZ DO NAS</p>
+            <ul class="footer__list">
+                <li class="social__item footer__social">
+                    <a href="">
+                        <svg width="20" height="20">
+                            <use href="images/icons.svg#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item footer__social">
+                    <a href=""> <svg width="20" height="20">
+                            <use href="images/icons.svg#twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item footer__social">
+                    <a href=""> <svg width="20" height="20">
+                            <use href="images/icons.svg#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item footer__social">
+                    <a href=""> <svg width="20" height="20">
+                            <use href="images/icons.svg#linkedin2"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__news">
+            <form name="news__signup" autocomplete="on" novalidate>
+                <p class="news__title">ZAPISZ SIĘ DO NEWSLETTERA</p>
+                <div class="news__items">
+                    <input class="news__input" type="email" name="E-mail" placeholder="E-mail" required>
+                    <button class="button footer__button" type="submit">
+                        Zapisz się<svg class="newsletter__svg" width="24" height="24">
+                            <use href="images/icons.svg#paper_plane"></use>
+                        </svg>
+                    </button>
+                </div>
+            </form>
         </div>
     </footer>
     <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: FOOTER &&&& ENDING: FOOTER | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
