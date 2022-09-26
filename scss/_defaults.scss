@@ -1,0 +1,41 @@
+@import "colors";
+@import "Variables";
+
+/* disable defaults */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* body default */
+body {
+  max-width: 1600px;
+  margin: 0 auto;
+  font-size: $defaultFontSize;
+  letter-spacing: $defaultLetterSpacing;
+  line-height: $defaultLineHeight;
+  font-family: "Roboto", "Raleway", sans-serif;
+  color: $primaryTextColor;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.section {
+  max-width: 1600px;
+  padding-top: 94px;
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    padding-bottom: 50px;
+    line-height: 42px;
+    text-align: center;
+  }
+}

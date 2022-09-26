@@ -704,7 +704,7 @@ body {
   transition-delay: 0s, 0s, 0s;
 }
 
-.modal--is-hidden {
+.modal__is-hidden {
   transform: scaleY(0);
   opacity: 0;
   visibility: hidden;
@@ -817,24 +817,24 @@ body {
   margin-right: auto;
 }
 
-.modal-checkbox {
+.modal__checkbox {
   display: flex;
   justify-content: center;
   padding-top: 20px;
 }
 
-.modal-checkbox input {
+.modal__checkbox--input {
   appearance: none;
 }
 
-.modal-checkbox__label {
+.modal__checkbox--label {
   position: relative;
   font-size: 14px;
   line-height: calc(24 / 14);
   letter-spacing: 00.03em;
 }
 
-.modal-checkbox__label::before {
+.modal__checkbox--label::before {
   content: "";
   display: block;
   position: absolute;

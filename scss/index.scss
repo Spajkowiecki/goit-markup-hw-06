@@ -1,2 +1,532 @@
-@import "aVariables";
-@import "Nested";
+@import "Variables";
+@import "defaults";
+@import "colors";
+
+/* LOGO */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 31px;
+  font-family: $fontRaleway, sans-serif;
+  color: $primaryTextColor;
+
+  &__header span:first-child {
+    /*color for the first span in HEADER*/
+    color: $primaryLinkColor;
+  }
+  &__footer {
+    /*color for logo text in FOOTER*/
+    color: $white;
+    span:first-child {
+      color: $primaryLinkColor;
+    }
+  }
+}
+/* HEADER */
+.page__header,
+.nav__list,
+.contact {
+  display: flex;
+}
+
+.page__header {
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 215px;
+  margin-right: 227px;
+  height: 80px;
+}
+
+.nav__list li:nth-child(2) {
+  padding-left: 46px;
+  padding-right: 46px;
+}
+
+.link {
+  font-family: $fontRoboto, sans-serif;
+  color: $primaryTextColor;
+  font-weight: 500;
+  &__nav {
+    letter-spacing: 0.02em;
+  }
+
+  &__footer {
+    color: rgba($white, 0.6);
+  }
+
+  &__icon {
+    svg {
+      position: relative;
+      top: 2px;
+    }
+    &:hover {
+      fill: $primaryLinkColor;
+    }
+  }
+
+  &:hover {
+    color: $primaryLinkColor;
+  }
+}
+
+.contact {
+  gap: 30px;
+}
+
+.hero {
+  color: $white;
+  min-height: 600px;
+  background: url("/images/hero.jpg");
+  font-family: $fontRoboto, sans-serif;
+  &__front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(47, 48, 58, 0.4);
+    width: inherit;
+    min-height: inherit;
+  }
+  &__text {
+    width: 696px;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 60px;
+    letter-spacing: 0.06em;
+    margin-bottom: 30px;
+  }
+}
+
+.button {
+  font-family: $fontRoboto, sans-serif;
+  font-size: 16px;
+  border: none;
+  width: 200px;
+  height: 50px;
+  font-weight: 700;
+  line-height: 30px;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  border-radius: 4px;
+  background-color: $primaryLinkColor;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: $white;
+
+  &:hover {
+    background-color: $secondaryButtonColor;
+    color: $primaryTextColor;
+  }
+}
+
+.button__filter {
+  @extend .button;
+  color: $primaryTextColor;
+  width: 121px;
+  height: 38px;
+  font-weight: 500;
+  line-height: 26px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  &:hover {
+    background-color: $primaryLinkColor;
+    color: $white;
+  }
+}
+
+.strength {
+  $svg_bg: #f5f4fa;
+  $textColor: #757575;
+
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__svg {
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+    width: 270px;
+    height: 120px;
+    background-color: $svg_bg;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-weight: 700;
+    font-family: $fontRoboto, sans-serif;
+    padding-bottom: 10px;
+  }
+  &__text {
+    color: $textColor;
+    font-weight: 400;
+    line-height: 24px;
+    width: 270px;
+    height: 75px;
+  }
+}
+
+.work {
+  &__list {
+    display: flex;
+    gap: 30px;
+  }
+  &__desc {
+    position: relative;
+    top: -73px;
+    display: flex;
+    width: 370px;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(47, 48, 58, 0.8);
+    font-weight: 700;
+    color: $white;
+  }
+}
+
+.team {
+  width: 1600px;
+  height: 708px;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  background: #f5f4fa;
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  &__item {
+    background: #ffffff;
+    height: 428px;
+    /* material shadow v1 */
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__title {
+    font-family: $fontRoboto;
+    font-weight: 500;
+
+    padding: 30px 0px 10px 0px;
+  }
+  &__subtitle {
+    font-weight: 400;
+    color: $secondaryTextColor;
+  }
+}
+.social {
+  padding: 30px 0px 10px 0px;
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: #afb1b8;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+    &:hover {
+      background-color: $primaryLinkColor;
+      fill: $white;
+    }
+  }
+}
+
+.client {
+  padding-bottom: 94px;
+  &__list {
+    display: flex;
+    gap: 30px;
+    li {
+      display: flex;
+      fill: #afb1b8;
+      justify-content: center;
+      align-items: center;
+      width: 170px;
+      height: 92px;
+      border: 1px solid #afb1b8;
+      border-radius: 4px;
+      transition: 500ms ease-in-out;
+    }
+    li:hover {
+      fill: $primaryLinkColor;
+      border: 1px solid $primaryLinkColor;
+      transform: scale(1.2);
+    }
+  }
+}
+
+.footer {
+  $bgColor: #2f303a;
+  background: $bgColor;
+  min-height: 252px;
+  color: $white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__logo {
+    padding-bottom: 20px;
+  }
+
+  &__addr {
+    padding-bottom: 9px;
+  }
+
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  &__title {
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__social {
+    fill: $white;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  &__button {
+    position: relative;
+    top: 2px;
+    fill: $white;
+    svg {
+      position: relative;
+      left: 24px;
+      top: 5px;
+    }
+    &:hover {
+      fill: #212121;
+    }
+  }
+
+  &__medias {
+    position: relative;
+    padding: 0px 78px 0px 70px;
+    top: -5px;
+  }
+}
+
+.news {
+  &__title {
+    font-weight: 700;
+    padding-bottom: 20px;
+  }
+  &__input {
+    width: 358px;
+    height: 50px;
+    background: #2f303a;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.6);
+    padding-left: 16px;
+  }
+}
+
+.modal {
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  border-radius: 4px;
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 1s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 450ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition-property: transform, visibility, opacity;
+  transition-duration: 500ms, 1s, 400ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1),
+    cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0s, 0s, 0s;
+  &__is-hidden {
+    transform: scaleY(0);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  &__window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white;
+    width: 528px;
+    height: 581px;
+    border-radius: 4px;
+  }
+
+  &__button {
+    cursor: pointer;
+    position: absolute;
+    background-color: inherit;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+    transition: background-color 500ms,
+      transform 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms;
+  }
+  &__button:hover {
+    background-color: $primaryLinkColor;
+    color: white;
+  }
+  &__form {
+    padding: 40px 40px 40px 40px;
+  }
+  &__form label {
+    display: block;
+    font-size: 12px;
+    position: relative;
+    color: $secondaryTextColor;
+  }
+
+  &__form textarea {
+    resize: none;
+    outline: none;
+    margin-top: 4px;
+    width: 100%;
+    height: 120px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding: 12px 0px 0px 16px;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill, border;
+  }
+
+  &__form textarea::placeholder {
+    color: $primaryTextColor;
+  }
+
+  &__form textarea:focus {
+    border: 1px solid $primaryLinkColor;
+  }
+
+  &__form h2 {
+    text-align: center;
+    padding-bottom: 12px;
+  }
+  &__input {
+    position: relative;
+    width: 100%;
+    height: 2.5rem;
+    padding-inline: 2.1rem;
+    margin-top: 0.25rem;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-bottom: 10px;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill, border;
+  }
+
+  &__input:focus {
+    outline: none;
+    border: 1px solid $primaryLinkColor;
+  }
+  &__input:focus {
+    fill: #2196f3;
+
+    & + svg {
+      fill: #2196f3;
+    }
+  }
+  &__button--submit {
+    display: flex;
+
+    margin-top: 30px;
+    padding: 10px 76px 10px 76px;
+    background-color: $primaryLinkColor;
+    color: $white;
+    line-height: calc(30 / 16);
+    font-weight: 700;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__checkbox {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  &__checkbox--input {
+    appearance: none;
+  }
+  &__checkbox--label {
+    position: relative;
+    font-size: 14px;
+    line-height: calc(24 / 14);
+    letter-spacing: 00.03em;
+  }
+
+  &__checkbox--label::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border: none;
+    height: 16px;
+    width: 16px;
+    left: -25px;
+    top: 2px;
+    background-image: url("../images/unchecked.svg");
+    cursor: pointer;
+  }
+  &__checkbox--input:checked + &__checkbox--label::before {
+    border: none;
+    height: 16px;
+    width: 16px;
+    background-image: url("../images/checked.svg");
+  }
+
+  &__link {
+    &:hover,
+    &:focus {
+      color: $primaryLinkColor;
+      text-decoration: underline;
+    }
+  }
+}
+
+.user-icon {
+  position: absolute;
+  left: 13px;
+  bottom: 3px;
+}
+
+.phone-icon {
+  position: absolute;
+  left: 13px;
+  bottom: 3px;
+}
+
+.mail-icon {
+  position: absolute;
+  left: 13px;
+  bottom: 3px;
+}
