@@ -1,0 +1,32 @@
+header {
+  display: flex;
+  height: 80px;
+  width: $secondaryPageWidth;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+  font-weight: 500;
+}
+
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+    li:nth-child(2) {
+      padding: 0px 46px 0px 46px;
+    }
+  }
+}
+
+.contact {
+  display: flex;
+  gap: 30px;
+  a {
+    color: $FontColor2;
+    fill: $FontColor2;
+    svg {
+      position: relative;
+      top: 2px;
+    }
+  }
+}

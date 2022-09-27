@@ -25,7 +25,7 @@
             <ul class="nav__list">
                 <!-- ▼▼▼ | POCZĄTEK: LINKI NAWIGACYJNE &&&& BEGINNING: NAV LINKS | ▼▼▼-->
                 <li><a class="link link__nav" href="index.html">Agencja</a></li>
-                <li><a class="link link__nav" href="portfolio.html">Portfolio</a></li>
+                <li><a class="link link__nav link__nav-active" href="portfolio.html">Portfolio</a></li>
                 <li><a class="link link__nav" href="kontakt.html">Kontakt</a></li>
                 <!-- ▲▲▲ | KONIEC: LINKI NAWIGACYJNE &&&& ENDING: NAV LINKS | ▲▲▲-->
             </ul>
@@ -225,59 +225,61 @@
         </section>
     </main>
     <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ | POCZĄTEK: FOOTER &&&& BEGINNING: FOOTER | ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
-    <footer class="footer">
-        <div class="footer__left">
-            <div class="footer__logo">
-                <a class="logo logo__footer" href="./index.html"><span>Web</span><span>Studio</span></a>
-            </div>
-            <address class="footer__addr">m. Warszawa, Aleje Jerozolimskie 21</address>
-            <ul class="footer__desc">
-                <li><a class="link link__footer" href="mailto:info@example.com">info@devstudio.com</a></li>
-                <li><a class="link link__footer" href="tel:+48111111111">+48 111 111 111</a></li>
-            </ul>
-        </div>
-        <div class="footer__medias">
-            <p class="footer__title">DOŁĄCZ DO NAS</p>
-            <ul class="footer__list">
-                <li class="social__item footer__social">
-                    <a href="">
-                        <svg width="20" height="20">
-                            <use href="images/icons.svg#instagram"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social__item footer__social">
-                    <a href=""> <svg width="20" height="20">
-                            <use href="images/icons.svg#twitter"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social__item footer__social">
-                    <a href=""> <svg width="20" height="20">
-                            <use href="images/icons.svg#facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social__item footer__social">
-                    <a href=""> <svg width="20" height="20">
-                            <use href="images/icons.svg#linkedin2"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer__news">
-            <form name="news__signup" autocomplete="on" novalidate>
-                <p class="news__title">ZAPISZ SIĘ DO NEWSLETTERA</p>
-                <div class="news__items">
-                    <input class="news__input" type="email" name="E-mail" placeholder="E-mail" required>
-                    <button class="button footer__button" type="submit">
-                        Zapisz się<svg class="newsletter__svg" width="24" height="24">
-                            <use href="images/icons.svg#paper_plane"></use>
-                        </svg>
-                    </button>
+    <footer class="section footer__center">
+        <div class="footer">
+            <div class="footer__left">
+                <div class="footer__logo">
+                    <a class="logo logo__footer" href="./index.html"><span>Web</span><span>Studio</span></a>
                 </div>
-            </form>
+                <address class="footer__addr">m. Warszawa, Aleje Jerozolimskie 21</address>
+                <ul class="footer__desc">
+                    <li><a class="link link__footer" href="mailto:info@example.com">info@devstudio.com</a></li>
+                    <li><a class="link link__footer" href="tel:+48111111111">+48 111 111 111</a></li>
+                </ul>
+            </div>
+            <div class="footer__mid">
+                <p class="footer__title">DOŁĄCZ DO NAS</p>
+                <ul class="media__list">
+                    <li class="button__social-footer">
+                        <a href="">
+                            <svg width="20" height="20">
+                                <use href="images/icons.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="button__social-footer">
+                        <a href=""> <svg width="20" height="20">
+                                <use href="images/icons.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="button__social-footer">
+                        <a href=""> <svg width="20" height="20">
+                                <use href="images/icons.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="button__social-footer">
+                        <a href=""> <svg width="20" height="20">
+                                <use href="images/icons.svg#linkedin2"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__right">
+                <form name="news" autocomplete="on" novalidate>
+                    <p class="news__title">ZAPISZ SIĘ DO NEWSLETTERA</p>
+                    <div class="news__items">
+                        <input class="news__input" type="email" name="E-mail" placeholder="E-mail" required>
+                        <button class="button footer__button" type="submit">
+                            Zapisz się<svg class="newsletter__svg" width="24" height="24">
+                                <use href="images/icons.svg#paper_plane"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </footer>
     <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: FOOTER &&&& ENDING: FOOTER | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->

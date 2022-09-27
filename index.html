@@ -22,12 +22,12 @@
     <link rel="stylesheet" href="./public/css/index.css">
 </head>
 
-<body class="center">
+<body>
     <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ | POCZĄTEK: OKNO MODALNE &&&& BEGINNING OF: MODAL WINDOW | ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ -->
     <!-- MODAL WINDOW | BLOCK |-->
     <div class="modal modal__is-hidden" data-modal>
         <div class="modal__window">
-            <button class="modal__button " type="button" data-modal-close>X</button>
+            <button class="button-modal" type="button" data-modal-close>X</button>
             <form name="modal__form" autocomplete="on" class="modal__form">
                 <h2>Zostaw swoje dane w formularzu poniżej</h2>
                 <label for="name">
@@ -61,11 +61,11 @@
                 </label>
                 <!-- ▼▼▼▼▼▼▼▼▼▼▼▼| CUSTOM CHECKBOX |▼▼▼▼▼▼▼▼▼▼▼▼ -->
                 <div class="modal__checkbox">
-                    <input class="modal__checkbox--input" type="checkbox" name="checkbox" id="checkbox" required>
+                    <input class="modal__checkbox-input" type="checkbox" name="checkbox" id="checkbox" required>
 
-                    <label for="checkbox" class="modal__checkbox--label">
-                        Oświadczam iż akceptuję <a class="checkbox__link" href="/regulamin.html">Regulamin</a> i
-                        <link rel="stylesheet" href="css/styles.css"> <a class="checkbox__link"
+                    <label for="checkbox" class="modal__checkbox-label">
+                        Oświadczam iż akceptuję <a class="modal__checkbox-link" href="/regulamin.html">Regulamin</a> i
+                        <link rel="stylesheet" href="css/styles.css"> <a class="modal__checkbox-link"
                             href="/polityka.html">Politykę
                             Prywatności</a>.
                     </label>
@@ -83,7 +83,7 @@
         <nav class="nav">
             <ul class="nav__list">
                 <!-- ▼▼▼ | POCZĄTEK: LINKI NAWIGACYJNE &&&& BEGINNING: NAV LINKS | ▼▼▼-->
-                <li><a class="link link__nav" href="index.html">Agencja</a></li>
+                <li><a class="link link__nav link__nav-active" href="index.html">Agencja</a></li>
                 <li><a class="link link__nav" href="portfolio.html">Portfolio</a></li>
                 <li><a class="link link__nav" href="kontakt.html">Kontakt</a></li>
                 <!-- ▲▲▲ | KONIEC: LINKI NAWIGACYJNE &&&& ENDING: NAV LINKS | ▲▲▲-->
@@ -116,24 +116,25 @@
     <div class="hero">
         <div class="hero__front">
             <h1 class="hero__text">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-            <button type="button" class="button" data-modal-open>Zamów usługe</button>
+            <button type="hero__button" class="button" data-modal-open>Zamów usługe</button>
         </div>
     </div>
     <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: HERO &&&& ENDING: HERO | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
     <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ | POCZĄTEK: MAIN &&&& BEGINNING: MAIN | ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
     <main class="main">
         <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ | POCZĄTEK: ATUTY &&&& BEGINNING: STRENGHTS | ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
-        <section id="strenghts" class="section strength">
-            <ul class="strength__list">
+        <section id="strenghts" class="section strenghts">
+            <ul class="cards">
                 <li>
                     <!-- ODDZIELNY KONTENER DLA OBRAZU -->
-                    <div class="strength__svg">
+                    <div class="card">
                         <svg width="70" height="70">
                             <use href="images/icons.svg#radar"></use>
                         </svg>
                     </div>
-                    <p class="strength__title">LOREM IPSUM</p>
-                    <p class="strength__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
+                    <p class="card__title">LOREM IPSUM</p>
+                    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam vel
                         arcu
                         sem. Sed
                         non
@@ -142,13 +143,13 @@
                         Interdum et malesuada</p>
                 </li>
                 <li>
-                    <div class="strength__svg">
+                    <div class="card">
                         <svg width="70" height="70">
                             <use href="images/icons.svg#clock"></use>
                         </svg>
                     </div>
-                    <p class="strength__title">LOREM IPSUM</p>
-                    <p class="strength__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
+                    <p class="card__title">LOREM IPSUM</p>
+                    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                         arcu
                         sem. Sed
                         non
@@ -157,13 +158,13 @@
                         Interdum et malesuada</p>
                 </li>
                 <li>
-                    <div class="strength__svg">
+                    <div class="card">
                         <svg width="70" height="70">
                             <use href="images/icons.svg#analitycs"></use>
                         </svg>
                     </div>
-                    <p class="strength__title">LOREM IPSUM</p>
-                    <p class="strength__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
+                    <p class="card__title">LOREM IPSUM</p>
+                    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                         arcu
                         sem. Sed
                         non
@@ -172,13 +173,13 @@
                         Interdum et malesuada</p>
                 </li>
                 <li>
-                    <div class="strength__svg">
+                    <div class="card">
                         <svg width="70" height="70">
                             <use href="images/icons.svg#cosmo"></use>
                         </svg>
                     </div>
-                    <p class="strength__title">LOREM IPSUM</p>
-                    <p class="strength__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
+                    <p class="card__title">LOREM IPSUM</p>
+                    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel
                         arcu
                         sem. Sed
                         non
@@ -190,18 +191,18 @@
 
         </section>
         <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: ATUTY &&&& ENDING: STRENGHTS | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
-        <section class="section work">
+        <section class="section">
             <h2 class="section__title">Czym się zajmujemy</h2>
-            <ul class="work__list">
+            <ul class="gallery">
                 <li>
                     <img src="images/i1.jpg" width="370" height="294" alt="pisze na klawiaturze">
-                    <p class="work__desc">APLIKACJE KOMPUTEROWE</p>
+                    <p class="gallery__title">APLIKACJE KOMPUTEROWE</p>
                 </li>
                 <li><img src="images/i2.jpg" width="370" height="294" alt="sprawdza wygląd strony na telefonach">
-                    <p class="work__desc">APLIKACJE MOBILNE</p>
+                    <p class="gallery__title">APLIKACJE MOBILNE</p>
                 </li>
                 <li><img src="images/i3.jpg" width="370" height="294" alt="wybiera palete kolorow">
-                    <p class="work__desc">ROZWIĄZANIA GRAFICZNE</p>
+                    <p class="gallery__title">ROZWIĄZANIA GRAFICZNE</p>
                 </li>
             </ul>
         </section>
@@ -215,28 +216,28 @@
                         <figcaption>
                             <h3 class="team__title">John Doe</h3>
                             <p class="team__subtitle">Product Designer</p>
-                            <div class="social">
-                                <ul class="social__list">
-                                    <li class="social__item">
+                            <div class="media">
+                                <ul class="media__list">
+                                    <li class="button__social-teams">
                                         <a href="">
                                             <svg width="20" height="20">
                                                 <use href="images/icons.svg#instagram"></use>
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="social__item">
+                                    <li class="button__social-teams">
                                         <a href=""> <svg width="20" height="20">
                                                 <use href="images/icons.svg#twitter"></use>
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="social__item">
+                                    <li class="button__social-teams">
                                         <a href=""> <svg width="20" height="20">
                                                 <use href="images/icons.svg#facebook"></use>
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="social__item">
+                                    <li class="button__social-teams">
                                         <a href=""> <svg width="20" height="20">
                                                 <use href="images/icons.svg#linkedin2"></use>
                                             </svg>
@@ -253,28 +254,28 @@
                         <figcaption>
                             <h3 class="team__title">John Doe</h3>
                             <p class="team__subtitle">Frontend Developer</p>
-                            <div class="social">
-                                <ul class="social__list">
-                                    <li class="social__item">
+                            <div class="media">
+                                <ul class="media__list">
+                                    <li class="button__social-teams">
                                         <a href="">
                                             <svg width="20" height="20">
                                                 <use href="images/icons.svg#instagram"></use>
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="social__item">
+                                    <li class="button__social-teams">
                                         <a href=""> <svg width="20" height="20">
                                                 <use href="images/icons.svg#twitter"></use>
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="social__item">
+                                    <li class="button__social-teams">
                                         <a href=""> <svg width="20" height="20">
                                                 <use href="images/icons.svg#facebook"></use>
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="social__item">
+                                    <li class="button__social-teams">
                                         <a href=""> <svg width="20" height="20">
                                                 <use href="images/icons.svg#linkedin2"></use>
                                             </svg>
@@ -291,28 +292,28 @@
                         <figcaption>
                             <h3 class="team__title">John Doe</h3>
                             <p class="team__subtitle">Marketing</p>
-                            <div class="social">
-                                <ul class="social__list">
-                                    <li class="social__item">
+                            <div class="media">
+                                <ul class="media__list">
+                                    <li class="button__social-teams">
                                         <a href="">
                                             <svg width="20" height="20">
                                                 <use href="images/icons.svg#instagram"></use>
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="social__item">
+                                    <li class="button__social-teams">
                                         <a href=""> <svg width="20" height="20">
                                                 <use href="images/icons.svg#twitter"></use>
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="social__item">
+                                    <li class="button__social-teams">
                                         <a href=""> <svg width="20" height="20">
                                                 <use href="images/icons.svg#facebook"></use>
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="social__item">
+                                    <li class="button__social-teams">
                                         <a href=""> <svg width="20" height="20">
                                                 <use href="images/icons.svg#linkedin2"></use>
                                             </svg>
@@ -329,28 +330,28 @@
                         <figcaption>
                             <h3 class="team__title">John Doe</h3>
                             <p class="team__subtitle">UI Designer</p>
-                            <div class="social">
-                                <ul class="social__list">
-                                    <li class="social__item">
+                            <div class="media">
+                                <ul class="media__list">
+                                    <li class="button__social-teams">
                                         <a href="">
                                             <svg width="20" height="20">
                                                 <use href="images/icons.svg#instagram"></use>
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="social__item">
+                                    <li class="button__social-teams">
                                         <a href=""> <svg width="20" height="20">
                                                 <use href="images/icons.svg#twitter"></use>
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="social__item">
+                                    <li class="button__social-teams">
                                         <a href=""> <svg width="20" height="20">
                                                 <use href="images/icons.svg#facebook"></use>
                                             </svg>
                                         </a>
                                     </li>
-                                    <li class="social__item">
+                                    <li class="button__social-teams">
                                         <a href=""> <svg width="20" height="20">
                                                 <use href="images/icons.svg#linkedin2"></use>
                                             </svg>
@@ -366,45 +367,45 @@
         <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: DRUŻYNA &&&& ENDING: TEAM | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
         <section class="section client">
             <h2 class="section__title">NASZ ZESPÓŁ</h2>
-            <ul class="client__list">
-                <li>
-                    <a class="client__item" href="">
+            <ul class="cards">
+                <li class="card__business">
+                    <a href="">
                         <svg width="41" height="46.7">
                             <use href="images/icons.svg#company_1"></use>
                         </svg>
                     </a>
                 </li>
-                <li>
-                    <a class="client__item" href="">
+                <li class="card__business">
+                    <a href="">
                         <svg width="40" height="52">
                             <use href="images/icons.svg#company_2"></use>
                         </svg>
                     </a>
                 </li>
-                <li>
-                    <a class="client__item" href="">
+                <li class="card__business">
+                    <a href="">
                         <svg width="43.46" height="41.18">
                             <use href="images/icons.svg#company_3"></use>
                         </svg>
                     </a>
                 </li>
-                <li>
+                <li class="card__business">
 
-                    <a class="client__item" href="">
+                    <a href="">
                         <svg width="84.44" height="40.62">
                             <use href="images/icons.svg#company_4"></use>
                         </svg>
                     </a>
                 </li>
-                <li>
-                    <a class="client__item" href="">
+                <li class="card__business">
+                    <a href="">
                         <svg width="62.54" height="45.43">
                             <use href="images/icons.svg#company_5"></use>
                         </svg>
                     </a>
                 </li>
-                <li>
-                    <a class="client__item" href="">
+                <li class="card__business">
+                    <a href="">
                         <svg width="93.79" height="43.93">
                             <use href="images/icons.svg#company_6"></use>
                         </svg>
@@ -416,59 +417,61 @@
     </main>
     <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: MAIN &&&& ENDING: MAIN | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
     <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ | POCZĄTEK: FOOTER &&&& BEGINNING: FOOTER | ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
-    <footer class="footer">
-        <div class="footer__left">
-            <div class="footer__logo">
-                <a class="logo logo__footer" href="./index.html"><span>Web</span><span>Studio</span></a>
-            </div>
-            <address class="footer__addr">m. Warszawa, Aleje Jerozolimskie 21</address>
-            <ul class="footer__desc">
-                <li><a class="link link__footer" href="mailto:info@example.com">info@devstudio.com</a></li>
-                <li><a class="link link__footer" href="tel:+48111111111">+48 111 111 111</a></li>
-            </ul>
-        </div>
-        <div class="footer__medias">
-            <p class="footer__title">DOŁĄCZ DO NAS</p>
-            <ul class="footer__list">
-                <li class="social__item footer__social">
-                    <a href="">
-                        <svg width="20" height="20">
-                            <use href="images/icons.svg#instagram"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social__item footer__social">
-                    <a href=""> <svg width="20" height="20">
-                            <use href="images/icons.svg#twitter"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social__item footer__social">
-                    <a href=""> <svg width="20" height="20">
-                            <use href="images/icons.svg#facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="social__item footer__social">
-                    <a href=""> <svg width="20" height="20">
-                            <use href="images/icons.svg#linkedin2"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="footer__news">
-            <form name="news__signup" autocomplete="on" novalidate>
-                <p class="news__title">ZAPISZ SIĘ DO NEWSLETTERA</p>
-                <div class="news__items">
-                    <input class="news__input" type="email" name="E-mail" placeholder="E-mail" required>
-                    <button class="button footer__button" type="submit">
-                        Zapisz się<svg class="newsletter__svg" width="24" height="24">
-                            <use href="images/icons.svg#paper_plane"></use>
-                        </svg>
-                    </button>
+    <footer class="section footer__center">
+        <div class="footer">
+            <div class="footer__left">
+                <div class="footer__logo">
+                    <a class="logo logo__footer" href="./index.html"><span>Web</span><span>Studio</span></a>
                 </div>
-            </form>
+                <address class="footer__addr">m. Warszawa, Aleje Jerozolimskie 21</address>
+                <ul class="footer__desc">
+                    <li><a class="link link__footer" href="mailto:info@example.com">info@devstudio.com</a></li>
+                    <li><a class="link link__footer" href="tel:+48111111111">+48 111 111 111</a></li>
+                </ul>
+            </div>
+            <div class="footer__mid">
+                <p class="footer__title">DOŁĄCZ DO NAS</p>
+                <ul class="media__list">
+                    <li class="button__social-footer">
+                        <a href="">
+                            <svg width="20" height="20">
+                                <use href="images/icons.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="button__social-footer">
+                        <a href=""> <svg width="20" height="20">
+                                <use href="images/icons.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="button__social-footer">
+                        <a href=""> <svg width="20" height="20">
+                                <use href="images/icons.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="button__social-footer">
+                        <a href=""> <svg width="20" height="20">
+                                <use href="images/icons.svg#linkedin2"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__right">
+                <form name="news" autocomplete="on" novalidate>
+                    <p class="news__title">ZAPISZ SIĘ DO NEWSLETTERA</p>
+                    <div class="news__items">
+                        <input class="news__input" type="email" name="E-mail" placeholder="E-mail" required>
+                        <button class="button footer__button" type="submit">
+                            Zapisz się<svg class="newsletter__svg" width="24" height="24">
+                                <use href="images/icons.svg#paper_plane"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </footer>
     <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: FOOTER &&&& ENDING: FOOTER | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->

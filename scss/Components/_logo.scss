@@ -1,0 +1,17 @@
+.logo {
+  font-family: $Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 31px;
+  &__header {
+    span:first-child {
+      color: $LightBlue;
+    }
+  }
+  &__footer {
+    color: $white;
+    span:first-child {
+      color: $LightBlue;
+    }
+  }
+}

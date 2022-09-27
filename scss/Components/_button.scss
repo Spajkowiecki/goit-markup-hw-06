@@ -1,0 +1,80 @@
+@import "../Variables";
+@import "../colors";
+
+$buttonWidth: 200px;
+$buttonHeight: 50px;
+
+button {
+  cursor: pointer;
+  transition: background-color, color, 500ms ease-in-out;
+}
+
+@mixin button-type($width, $height, $radius) {
+  width: $width;
+  height: $height;
+  border-radius: $radius;
+}
+
+.button {
+  @include button-type(200px, 50px, 4px);
+  background: $LightBlue;
+  color: $white;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  svg {
+    position: relative;
+    fill: $white;
+    top: 5px;
+    left: 20px;
+  }
+
+  &__social {
+    &-teams {
+      @include button-type(44px, 44px, 50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      fill: $LightGray;
+
+      &:hover {
+        fill: $white;
+        background: $LightBlue;
+      }
+    }
+
+    &-footer {
+      @include button-type(44px, 44px, 50%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      fill: $white;
+      background: rgba(255, 255, 255, 0.1);
+      &:hover {
+        background: $LightBlue;
+      }
+    }
+  }
+  &-modal {
+    @include button-type(30px, 30px, 50%);
+    position: absolute;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    top: 8px;
+    right: 8px;
+    &:hover {
+      background: $LightBlue;
+      color: $white;
+    }
+  }
+  &:hover {
+    background: $white;
+    color: $black;
+  }
+  &:focus {
+    border: 2px solid $blue;
+  }
+}

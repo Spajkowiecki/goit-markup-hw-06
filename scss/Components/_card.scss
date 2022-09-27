@@ -1,0 +1,47 @@
+@mixin card($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  @include card(270px, 120px);
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+  $bgColor: #f5f4fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $bgColor;
+  &__title {
+    font-weight: 700;
+    padding: 30px 0px 10px 0px;
+  }
+  &__text {
+    width: 270px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  &__business {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid $LightGray;
+    fill: $LightGray;
+    border-radius: 4px;
+    transition: fill, border, 500ms ease-in-out;
+    &:hover {
+      border: 1px solid $LightBlue;
+      fill: $LightBlue;
+      transform: scale(1.2);
+    }
+  }
+}
