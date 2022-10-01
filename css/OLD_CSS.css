@@ -424,6 +424,7 @@ body {
 
 .portfolio_poster:hover .poster_overflow {
   transform: translateY(0);
+  cursor: pointer;
 }
 
 .poster_overflow {

@@ -1,11 +1,7 @@
 @import "./../Variables";
-.container {
-  max-width: 1600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.main {
-  margin-left: auto;
-  margin-right: auto;
+.center {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }

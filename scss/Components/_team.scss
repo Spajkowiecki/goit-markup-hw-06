@@ -1,13 +1,14 @@
 .team {
+  width: $defaultPageWidth;
   font-size: 16px;
   line-height: 19px;
   letter-spacing: 0.03em;
-  background-color: green;
+  background-color: #f5f4fa;
+  padding: 94px 0px 94px 0px;
   &__list {
     display: flex;
     align-self: center;
     gap: 30px;
-    padding-bottom: 94px;
   }
   &__item {
     background: white;
