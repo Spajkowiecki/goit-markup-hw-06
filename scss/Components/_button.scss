@@ -89,3 +89,14 @@ button {
     border: 2px solid $blue;
   }
 }
+
+@media screen and(min-width: 480px) {
+  .button {
+    &__filter {
+      padding: 6px 13px 6px 13px;
+      border: none;
+      background: #f5f4fa;
+      border-radius: 4px;
+    }
+  }
+}

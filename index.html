@@ -61,13 +61,13 @@
                 </label>
                 <!-- ▼▼▼▼▼▼▼▼▼▼▼▼| CUSTOM CHECKBOX |▼▼▼▼▼▼▼▼▼▼▼▼ -->
                 <div class="modal__checkbox">
-                    <input class="modal__checkbox-input" type="checkbox" name="checkbox" id="checkbox" required>
 
                     <label for="checkbox" class="modal__checkbox-label">
-                        Oświadczam iż akceptuję <a class="modal__checkbox-link" href="/regulamin.html">Regulamin</a> i
-                        <link rel="stylesheet" href="css/styles.css"> <a class="modal__checkbox-link"
-                            href="/polityka.html">Politykę
-                            Prywatności</a>.
+
+                        <input class="modal__checkbox-input" type="checkbox" name="checkbox" id="checkbox" required>
+                        <p>Oświadczam iż akceptuję <a class="link" href="">Regulamin</a> i <a class="link"
+                                href="">Politykę</a></p>
+
                     </label>
                 </div>
                 <!-- ▲▲▲▲▲▲▲▲▲▲▲▲| CUSTOM CHECKBOX |▲▲▲▲▲▲▲▲▲ -->
@@ -80,6 +80,13 @@
     <header class="header">
         <!-- | LOGO | -->
         <a class="logo logo__header" href="./index.html"><span>Web</span><span>Studio</span></a>
+        <button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+            <svg width="24" height="24" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </button>
         <nav class="nav">
             <ul class="nav__list">
                 <!-- ▼▼▼ | POCZĄTEK: LINKI NAWIGACYJNE &&&& BEGINNING: NAV LINKS | ▼▼▼-->
@@ -195,7 +202,7 @@
         </section>
 
         <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: ATUTY &&&& ENDING: STRENGHTS | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
-        <section class="section">
+        <section id="gallery" class="whatwedo section">
             <div class="center">
                 <h2 class="section__title">Czym się zajmujemy</h2>
                 <ul class="gallery">
@@ -214,7 +221,7 @@
         </section>
         <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: CO ROBIMY &&&& ENDING: WHAT WE DO | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
         <section class="section">
-            <div class="team center">
+            <div class="team">
                 <h2 class="section__title">NASZ ZESPÓŁ</h2>
                 <ul class="team__list">
                     <li>
@@ -374,7 +381,7 @@
         </section>
 
         <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: DRUŻYNA &&&& ENDING: TEAM | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
-        <section class="section client">
+        <section class="section">
             <div class="center">
                 <h2 class="section__title">NASZ ZESPÓŁ</h2>
                 <ul class="cards">
@@ -432,46 +439,49 @@
     <!-- ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼ | POCZĄTEK: FOOTER &&&& BEGINNING: FOOTER | ▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
     <footer class="section footer__center">
         <div class="footer">
-            <div class="footer__left">
-                <div class="footer__logo">
-                    <a class="logo logo__footer" href="./index.html"><span>Web</span><span>Studio</span></a>
+            <div class="left">
+                <div class="footer__left">
+                    <div class="footer__logo">
+                        <a class="logo logo__footer" href="./index.html"><span>Web</span><span>Studio</span></a>
+                    </div>
+                    <address class="footer__addr">m. Warszawa, Aleje Jerozolimskie 21</address>
+                    <ul class="footer__desc">
+                        <li><a class="link link__footer" href="mailto:info@example.com">info@devstudio.com</a></li>
+                        <li><a class="link link__footer" href="tel:+48111111111">+48 111 111 111</a></li>
+                    </ul>
                 </div>
-                <address class="footer__addr">m. Warszawa, Aleje Jerozolimskie 21</address>
-                <ul class="footer__desc">
-                    <li><a class="link link__footer" href="mailto:info@example.com">info@devstudio.com</a></li>
-                    <li><a class="link link__footer" href="tel:+48111111111">+48 111 111 111</a></li>
-                </ul>
+                <div class="footer__mid">
+                    <p class="footer__title">DOŁĄCZ DO NAS</p>
+                    <ul class="media__list">
+                        <li class="button__social-footer">
+                            <a href="">
+                                <svg width="20" height="20">
+                                    <use href="images/icons.svg#instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="button__social-footer">
+                            <a href=""> <svg width="20" height="20">
+                                    <use href="images/icons.svg#twitter"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="button__social-footer">
+                            <a href=""> <svg width="20" height="20">
+                                    <use href="images/icons.svg#facebook"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="button__social-footer">
+                            <a href=""> <svg width="20" height="20">
+                                    <use href="images/icons.svg#linkedin2"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer__mid">
-                <p class="footer__title">DOŁĄCZ DO NAS</p>
-                <ul class="media__list">
-                    <li class="button__social-footer">
-                        <a href="">
-                            <svg width="20" height="20">
-                                <use href="images/icons.svg#instagram"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="button__social-footer">
-                        <a href=""> <svg width="20" height="20">
-                                <use href="images/icons.svg#twitter"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="button__social-footer">
-                        <a href=""> <svg width="20" height="20">
-                                <use href="images/icons.svg#facebook"></use>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="button__social-footer">
-                        <a href=""> <svg width="20" height="20">
-                                <use href="images/icons.svg#linkedin2"></use>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+
             <div class="footer__right">
                 <form name="news" autocomplete="on" novalidate>
                     <p class="news__title">ZAPISZ SIĘ DO NEWSLETTERA</p>
@@ -488,6 +498,42 @@
         </div>
     </footer>
     <!-- ▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲ | KONIEC: FOOTER &&&& ENDING: FOOTER | ▲▲▲▲▲▲▲▲▲▲▲▲▲▲ -->
+
+    <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="menu-toggle js-close-menu">
+            <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <path fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd"></path>
+            </svg>
+        </button>
+
+        <div class="mobile__content">
+            <ul class="mobile-menu">
+                <li><a href="index.html" class="link">Agencja</a></li>
+                <li><a href="portfolio.html" class="link">Portfolio</a></li>
+                <li><a href="kontakt.html" class="link">Kontakt</a></li>
+            </ul>
+            <div class="mobile__bottom">
+                <div class="mobile__contact">
+                    <a class="mobile" href="tel:+48111111111">+48 111 111 111</a>
+                    <a class="email" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                </div>
+                <ul class="mobile__socials">
+                    <li>Instagram</li>
+                    <li>Twitter</li>
+                    <li>Facebook</li>
+                    <li>LinkedIn</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 

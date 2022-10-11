@@ -1,9 +1,10 @@
 @import "../Variables";
 .posters {
-  width: $secondaryPageWidth;
+  max-width: $secondaryPageWidth;
 
   &__filter {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 8px;
     padding-bottom: 50px;
@@ -20,8 +21,8 @@
 .poster {
   background-color: var(--logo-white);
   &__item {
-    width: 370px;
-    height: 404px;
+    min-width: 370px;
+    min-height: 404px;
   }
 
   &__slider {
@@ -88,5 +89,40 @@
     line-height: calc(30 / 16);
     font-size: 16px;
     font-style: normal;
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .posters {
+    &__list {
+      justify-content: center;
+    }
+  }
+
+  .poster {
+    &__slider {
+      width: 354px;
+      img {
+        width: inherit;
+      }
+    }
+  }
+}
+@media screen and(max-width: 768px) {
+  .posters {
+    &__list {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and(max-width: 480px) {
+  .poster {
+    &__slider {
+      width: 450px;
+      img {
+        width: inherit;
+      }
+    }
   }
 }

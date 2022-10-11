@@ -12,7 +12,8 @@ a {
 }
 
 body {
-  width: $defaultPageWidth;
+  min-width: 480px;
+  max-width: $defaultPageWidth;
   font-size: $defaultFontSize;
   font-family: $Roboto, $Raleway, sans-serif;
   color: $FontColor;
@@ -23,6 +24,7 @@ body {
 .link {
   line-height: 16px;
   transition: 250ms ease-in-out;
+
   &:hover {
     color: $LightBlue;
     fill: $LightBlue;

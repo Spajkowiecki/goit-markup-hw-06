@@ -1,0 +1,42 @@
+@import "./../colors";
+
+.mobile {
+  &__contact {
+    .mobile {
+      font-size: 34px;
+      color: $LightBlue;
+    }
+    .email {
+      font-size: 24px;
+      color: $FontColor2;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+
+    gap: 64px;
+  }
+
+  &__socials {
+    display: flex;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $LightBlue;
+    li:not(:last-child) {
+      border-right: 1px solid $FontColor2;
+      padding-right: 10px;
+    }
+    li:not(:first-child) {
+      padding-left: 10px;
+    }
+  }
+}

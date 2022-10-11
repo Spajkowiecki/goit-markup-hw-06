@@ -1,15 +1,6 @@
 @import "../Variables";
 
 .section {
-  &:first-child {
-    padding-top: 94px;
-  }
-  &:not(:nth-child(2)) {
-    padding-bottom: 94px;
-  }
-}
-
-.section {
   &__title {
     text-align: center;
     font-weight: 700;
@@ -17,5 +8,30 @@
     line-height: 42px;
     letter-spacing: 0.03em;
     padding-bottom: 50px;
+  }
+}
+
+.section {
+  &:first-child {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &:nth-child(4) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .section {
+    &:first-child {
+      padding-top: 60px;
+      padding-bottom: 45px;
+    }
+
+    &:nth-child(3) {
+      padding-top: 60px;
+    }
   }
 }

@@ -32,7 +32,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
+    min-width: 170px;
     height: 92px;
     border: 1px solid $LightGray;
     fill: $LightGray;
@@ -42,6 +42,51 @@
       border: 1px solid $LightBlue;
       fill: $LightBlue;
       transform: scale(1.2);
+    }
+  }
+}
+
+@media screen and(max-width: 768px) {
+  .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    @include card(354px, 120px);
+    &__text {
+      width: 354px;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+    }
+    &__business {
+      width: 226px;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 480px) {
+  .cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    @include card(450px, 120px);
+    &__text {
+      width: 450px;
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.03em;
+    }
+    &__business {
+      width: 210px;
+
+      &:hover {
+        transform: scale(1);
+      }
     }
   }
 }
